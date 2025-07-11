@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smoothie Machine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoothie Machine</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>The Smoothie Machine</h1>
-    <form id="smoothieForm">
-      <label for="size">Size</label>
-      <select id="size">
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-      </select>
+    <div class="container">
+        <h1>The Smoothie Machine</h1>
+        <form id="smoothieForm">
+            <label for="size">Size</label>
+            <select id="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
 
-      <label>Choose Fruits</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" value="Banana"> Banana</label>
-        <label><input type="checkbox" value="Strawberry"> Strawberry</label>
-        <label><input type="checkbox" value="Mango"> Mango</label>
-        <label><input type="checkbox" value="Blueberry"> Blueberry</label>
-        <label><input type="checkbox" value="Pineapple"> Pineapple</label>
-      </div>
+            <label>Choose Fruits</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Banana"> Banana</label>
+                <label><input type="checkbox" value="Strawberry"> Strawberry</label>
+                <label><input type="checkbox" value="Mango"> Mango</label>
+                <label><input type="checkbox" value="Blueberry"> Blueberry</label>
+                <label><input type="checkbox" value="Pineapple"> Pineapple</label>
+            </div>
 
-      <label for="base">Liquid Base</label>
-      <select id="base">
-        <option value="Almond Milk">Almond Milk</option>
-        <option value="Coconut Water">Coconut Water</option>
-        <option value="Orange Juice">Orange Juice</option>
-      </select>
+            <label for="base">Liquid Base</label>
+            <select id="base">
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Coconut Water">Coconut Water</option>
+                <option value="Orange Juice">Orange Juice</option>
+            </select>
 
-      <button type="submit">Order</button>
-    </form>
+            <button type="submit">Order</button>
+        </form>
 
-    <div id="output"></div>
-  </div>
+        <div id="output"></div>
+    </div>
 </body>
 </html>
