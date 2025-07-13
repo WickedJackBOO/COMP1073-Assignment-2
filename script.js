@@ -4,16 +4,20 @@ class Smoothie {
         this.fruits = fruits
         this.base = base
     }
-    desc() {
-        let out = "Size: " + this.size + " | Fruits: "
+    getDescription() {
+        if (this.fruits.length == 0) {
+            return "You ordered a " + this.size + " smoothie with no fruits and " + this.base + " as the base. Brave choice!"
+        }
+
+        let fruits = ""
         for (let i = 0; i < this.fruits.length; i++) {
-            out += this.fruits[i]
-            if (i != this.fruits.length - 1) {
-                out += ", "
+            fruits += this.fruits[i]
+            if (i < this.fruits.length - 1) {
+                fruits += ", "
             }
         }
-        out += " | Base: " + this.base
-        return out
+
+        return "You ordered a " + this.size + " smoothie with " + fruits + " and " + this.base + " as the base. Enjoy!"
     }
 }
 
@@ -24,7 +28,7 @@ document.getElementById("smoothieForm").addEventListener("submit", function(e) {
     let basePicked = document.getElementById("base").value
     let fruitList = []
 //  let there be light
-    let boxes = document.querySelectorAll("input[type='checkbox']")
+    let boxes = document.querySelectorAll(".checkbox-group input[type='checkbox']")
     for (let i = 0; i < boxes.length; i++) {
         if (boxes[i].checked) {
             fruitList.push(boxes[i].value)
@@ -32,5 +36,5 @@ document.getElementById("smoothieForm").addEventListener("submit", function(e) {
     }
 
     let newSmoothie = new Smoothie(sizePicked, fruitList, basePicked)
-    document.getElementById("output").innerText = newSmoothie.desc()
+    document.getElementById("output").innerText = newSmoothie.getDescription()
 })
