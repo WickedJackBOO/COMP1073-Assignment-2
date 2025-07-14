@@ -1,3 +1,4 @@
+/* just resets and centers everything */
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
@@ -7,39 +8,37 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} /* box around stuff */
 .container {
     background: #1a1a1a;
     padding: 2rem;
     border: 2px solid #00ffee;
     border-radius: 40px;
     box-shadow: 0 0 20px #00ffee;
-}
+} /* big title */
 h1 {
     text-align: center;
     color: #ff00cc;
-}
+} /* layout form items */
 form {
     display: flex;
     flex-direction: column;
-}
-label {
+}label {
     margin-top: 10px;
-}
-select, input[type="checkbox"] {
+}select, input[type="checkbox"] {
     margin-top: 5px;
-}
+} /* layout fruit checkboxes */
 .checkbox-group {
     display: flex;
     gap: 10px;
-}
+} /* style button */
 button {
     margin-top: 20px;
     padding: 10px;
     background: #ff00cc;
     font-weight: bold;
     cursor: pointer;
-}
+} /* output area */
 #output {
     margin-top: 20px;
     padding: 10px;
